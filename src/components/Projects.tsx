@@ -8,8 +8,30 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useInView } from 'react-intersection-observer';
+import React, { useRef, useState, useEffect } from "react";
+import type { CarouselApi } from "@/components/ui/carousel";
+
 
 const Projects = () => {
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  useEffect(() => {
+    if (!api) return;
+  
+    setScrollSnaps(api.scrollSnapList());
+    setSelectedIndex(api.selectedScrollSnap());
+  
+    const onSelect = () => setSelectedIndex(api.selectedScrollSnap());
+    api.on("select", onSelect);
+  
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+  
+
   const [ref, inView] = useInView({
     triggerOnce: false, // <-- This is important
     threshold: 0.1,      // Adjust if needed
@@ -73,6 +95,7 @@ const Projects = () => {
               align: "start",
               loop: true,
             }}
+            setApi={setApi}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
@@ -130,9 +153,20 @@ const Projects = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="h-20 w-12 -left-6 md:-left-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30 hover:bg-gradient-to-r hover:from-purple-600/40 hover:to-blue-600/40 text-purple-300 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25 backdrop-blur-md" />
-            <CarouselNext className="h-20 w-12 -right-6 md:-right-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30 hover:bg-gradient-to-r hover:from-purple-600/40 hover:to-blue-600/40 text-purple-300 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/25 backdrop-blur-md" />
           </Carousel>
+          <div className="flex justify-center mt-4 space-x-2">
+            {scrollSnaps.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-3 w-3 rounded-full transition-colors duration-300 ${
+                  index === selectedIndex
+                    ? "bg-purple-500 scale-110"
+                    : "bg-purple-300/70 dark:bg-purple-300/40 hover:bg-purple-400/80"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
