@@ -51,7 +51,7 @@ const About = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-3 mt-6">
                 {[
-                  { value: 15, label: 'Projects' },
+                  { value: 25, label: 'Projects' },
                   { value: 7, label: 'Years Exp' },
                 ].map((stat, index) => {
                   const [ref, inView] = useInView({ triggerOnce: false });
@@ -78,12 +78,11 @@ const About = () => {
             {/* Introduction */}
             <AnimatedCard>
               <h3 className="text-2xl font-semibold mb-4">
-                <span className="text-purple-600 dark:text-purple-400">I can code EVERYTHING!</span>
+                <span className="text-purple-600 dark:text-purple-400">Who am i?</span>
               </h3>
               <p className="text-base text-foreground/80 leading-relaxed paragraph">
-                I'm a 20-year-old developer based in Algeria, committed to writing clean, 
-                maintainable code and continuously learning. I stay up-to-date with 
-                the latest technologies to deliver high-quality work.
+                A 23 years old Algerian youngman who enjoys learning new things and taking on challenges. When I'm not working, you'll often find me playing the guitar, gaming, or discovering new movies and TV shows. Im also obsessed with playing football and boxing. 
+                I believe that curiosity, consistency, and a positive mindset are just as important as technical skills, and I strive to bring those qualities into everything I do.
               </p>
             </AnimatedCard>
 
@@ -94,10 +93,10 @@ const About = () => {
                 Education & Background
               </h3>
               <p className="text-base text-foreground/80 leading-relaxed paragraph">
-                Currently a third-year student at CESI EXIA, a French engineering university,
-                where I earned my diploma "IT developer" at the end of my second year. 
+                Currently a 5th-year student at CESI EXIA, a French engineering university,
+                where I earned my diploma "IT developer" at the end of my second year, and I am now pursuing my final year to get my engineering diploma in cybersecurity. 
                 <a 
-                  href="https://www.francecompetences.fr/recherche/rncp/39623/" 
+                  href="https://www.francecompetences.fr/recherche/rncp/38779#anchor2" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors duration-200 ml-1 underline"
@@ -113,7 +112,7 @@ const About = () => {
             {/* Experience & Passion */}
             <AnimatedCard>
               <h3 className="text-xl font-semibold mb-3 text-purple-600 dark:text-purple-400 ">
-                Experience & Passion
+                Web Development
               </h3>
               <p className="text-base text-foreground/80 leading-relaxed mb-3 paragraph">
                 With over 5 years of experience in web development, I specialize in creating 
@@ -138,26 +137,11 @@ const About = () => {
             {/* Skills Preview */}
             <AnimatedCard>
               <h3 className="text-xl font-semibold mb-6 text-purple-600 dark:text-purple-400">
-                What I Love Working With
+                Networking and system administration
               </h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center text-center paragraph">
-                <div className="flex flex-col items-center space-y-2">
-                  <BiCodeBlock className="text-4xl text-purple-600 dark:text-purple-400" />
-                  <span className="text-sm text-foreground/80">Backend</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <PiFlowArrowBold className="text-4xl text-purple-600 dark:text-purple-400" />
-                  <span className="text-sm text-foreground/80">APIs</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaPython className="text-4xl text-purple-600 dark:text-purple-400" />
-                  <span className="text-sm text-foreground/80">Python</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaJs className="text-4xl text-purple-600 dark:text-purple-400" />
-                  <span className="text-sm text-foreground/80">JavaScript</span>
-                </div>
-              </div>
+              <p className="text-base text-foreground/80 leading-relaxed paragraph">
+               I have hands-on experience in networking and system administration, with a strong understanding of network design, routing and switching, Windows Server, Active Directory, virtualization, and Linux administration. Through academic projects and practical labs, I have built network infrastructures while applying industry best practices.
+              </p>
             </AnimatedCard>
           </div>
         </div>
