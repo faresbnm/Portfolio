@@ -58,7 +58,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <div className="animate-on-scroll">
             <h3 className="text-2xl font-semibold text-purple-400 mb-6">Get In Touch</h3>
-            <p className="text-lg text-foreground/80 mb-8">
+            <p className="text-lg text-foreground/80 mb-8 paragraph">
               I'm always interested in new opportunities and exciting projects. 
               Whether you have a question or just want to say hi, feel free to reach out!
             </p>
@@ -70,7 +70,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-purple-400 font-semibold">Email</div>
-                  <div className="text-foreground/80">fbnm8829@gmail.com</div>
+                  <div className="text-foreground/80 paragraph">fbnm8829@gmail.com</div>
                 </div>
               </div>
 
@@ -90,7 +90,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-purple-400 font-semibold">Location</div>
-                  <div className="text-foreground/80">Algiers, Algeria</div>
+                  <div className="text-foreground/80">Saoula, Algiers, Algeria</div>
                 </div>
               </div>
             </div>

@@ -80,7 +80,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-4">
                 <span className="text-purple-600 dark:text-purple-400">I can code EVERYTHING!</span>
               </h3>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-foreground/80 leading-relaxed paragraph">
                 I'm a 20-year-old developer based in Algeria, committed to writing clean, 
                 maintainable code and continuously learning. I stay up-to-date with 
                 the latest technologies to deliver high-quality work.
@@ -93,7 +93,7 @@ const About = () => {
               <h3 className="text-xl font-semibold mb-3 text-purple-600 dark:text-purple-400">
                 Education & Background
               </h3>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-foreground/80 leading-relaxed paragraph">
                 Currently a third-year student at CESI EXIA, a French engineering university,
                 where I earned my diploma "IT developer" at the end of my second year. 
                 <a 
@@ -112,10 +112,10 @@ const About = () => {
 
             {/* Experience & Passion */}
             <AnimatedCard>
-              <h3 className="text-xl font-semibold mb-3 text-purple-600 dark:text-purple-400">
+              <h3 className="text-xl font-semibold mb-3 text-purple-600 dark:text-purple-400 ">
                 Experience & Passion
               </h3>
-              <p className="text-base text-foreground/80 leading-relaxed mb-3">
+              <p className="text-base text-foreground/80 leading-relaxed mb-3 paragraph">
                 With over 5 years of experience in web development, I specialize in creating 
                 robust backend systems and intuitive frontend interfaces. My journey began with a 
                 curiosity for how things work behind the scenes, and it has grown into a passion 
@@ -126,15 +126,9 @@ const About = () => {
             {/* Beyond Web Development */}
             <AnimatedCard>
               <h3 className="text-xl font-semibold mb-3 text-purple-600 dark:text-purple-400">
-                Beyond Web Development
+                Cybersecurity
               </h3>
-              <p className="text-base text-foreground/80 leading-relaxed mb-3">
-                Outside of web development, I'm passionate about a wide range of creative and technical disciplines.
-                I have experience in <span className="font-medium text-purple-700 dark:text-purple-300">video editing</span>,
-                <span className="font-medium text-purple-700 dark:text-purple-300"> graphic design</span>, and 
-                <span className="font-medium text-purple-700 dark:text-purple-300"> Photoshop</span>, which allow me to bring visual storytelling into my projects.
-              </p>
-              <p className="text-base text-foreground/80 leading-relaxed">
+              <p className="text-base text-foreground/80 leading-relaxed paragraph">
                 I'm also deeply interested in <span className="font-medium text-purple-700 dark:text-purple-300">cybersecurity</span>,
                 especially in <span className="font-medium text-purple-700 dark:text-purple-300">penetration testing</span>. I enjoy
                 exploring system vulnerabilities and understanding how to secure digital environments, blending both curiosity and responsibility in the tech world.
@@ -146,7 +140,7 @@ const About = () => {
               <h3 className="text-xl font-semibold mb-6 text-purple-600 dark:text-purple-400">
                 What I Love Working With
               </h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center text-center">
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center text-center paragraph">
                 <div className="flex flex-col items-center space-y-2">
                   <BiCodeBlock className="text-4xl text-purple-600 dark:text-purple-400" />
                   <span className="text-sm text-foreground/80">Backend</span>

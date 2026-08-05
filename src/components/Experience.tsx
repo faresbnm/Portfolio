@@ -66,7 +66,7 @@ const Experience = () => {
       ]
     },
     {
-      title: "Website penetration testing internship",
+      title: "penetration testing internship",
       company: "Société Général",
       period: "01/2025 - 04/2025",
       description: "Conducted a thorough penetration test on the public-facing website, application's APIs and web servers, identifying vulnerabilities and reporting findings in a structured, professional pentest report.",
@@ -77,7 +77,33 @@ const Experience = () => {
         "Developed an admin dashboard to monitor maintenance activity and view key statistics",
         "Helped strengthen the institution's overall security posture through actionable insights"
       ]
-    }
+    },
+ {
+  title: "networking & cybersecurity internship",
+  company: "CNEP Banque",
+  period: "10/2025 - 01/2026",
+  description: "Designed and secured a multi-site enterprise network by deploying Cisco and FortiGate infrastructure, performing penetration testing, hardening vulnerable systems, and validating security improvements through post-hardening assessments.",
+  achievements: [
+    "Designed and deployed a multi-site network using Cisco routers, FortiGate firewalls, and OSPF routing",
+    "Configured Windows Server, Active Directory, and Windows client machines in a realistic enterprise environment",
+    "Performed penetration testing against network devices, Active Directory, and Windows systems to identify vulnerabilities",
+    "Implemented network and system hardening measures following industry best practices and security benchmarks",
+    "Validated security improvements through post-hardening penetration testing and documented findings in a comprehensive technical report"
+  ]
+},
+{
+  title: "IT Help Desk Technician",
+  company: "SARL GS ICT",
+  period: "07/2026 - Present",
+  description: "Provide technical support to end users by diagnosing hardware, software, and network issues, configuring IT equipment, and ensuring the reliable operation of the company's IT infrastructure.",
+  achievements: [
+    "Diagnose and resolve hardware, software, and network connectivity issues for end users",
+    "Install, configure, and maintain workstations, printers, and peripheral devices",
+    "Support Windows environments and troubleshoot operating system and application issues",
+    "Manage user accounts, software installations, and routine IT maintenance tasks",
+    "Collaborate with the IT team to deliver efficient technical support and improve service quality"
+  ]
+}
   ];
 
   const toggleAccordion = (index: number) => {
@@ -113,9 +139,9 @@ const Experience = () => {
                     </span>
                   </div>
                   
-                  <p className="text-foreground/80 mb-4">{exp.description}</p>
+                  <p className="text-foreground/80 mb-4 paragraph">{exp.description}</p>
                   
-                  <div className="flex items-center justify-between text-sm text-purple-500 dark:text-purple-400">
+                  <div className="flex items-center justify-between text-sm text-purple-500 dark:text-purple-400 ">
                     <span>View achievements ({exp.achievements.length})</span>
                     <svg 
                       className={`w-5 h-5 transition-transform duration-300 ${
@@ -137,7 +163,7 @@ const Experience = () => {
                   }`}
                 >
                   <div className="px-6 pb-6">
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 font-bold paragraph">
                       {exp.achievements.map((achievement) => (
                         <li 
                           key={achievement} 

@@ -116,7 +116,7 @@ const Projects = () => {
                         {project.title}
                       </h3>
                       
-                      <p className="text-foreground/80 mb-4 flex-grow transition-colors duration-300 group-hover:text-foreground/90">
+                      <p className="text-foreground/80 mb-4 flex-grow transition-colors duration-300 group-hover:text-foreground/90 paragraph">
                         {project.description}
                       </p>
                       
