@@ -36,42 +36,46 @@ const About = () => {
         
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Profile Card */}
-          <div className="lg:col-span-1 animate-on-scroll">
-            <div className="sticky top-16">
-              <div className="relative">
-                <div className="w-full max-w-xs mx-auto h-64 rounded-2xl bg-gradient-to-br from-purple-100/50 to-blue-100/50 dark:from-purple-500/20 dark:to-blue-500/20 glass-effect dark:glass-effect flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center text-4xl font-bold text-white">
-                    FB
-                  </div>
-                </div>
-                <div className="absolute -top-2 -right-2 w-12 h-12 bg-pink-500/30 rounded-full animate-float"></div>
-                <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-purple-500/30 rounded-full animate-float" style={{ animationDelay: '-2s' }}></div>
-              </div>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-3 mt-6">
-                {[
-                  { value: 25, label: 'Projects' },
-                  { value: 7, label: 'Years Exp' },
-                ].map((stat, index) => {
-                  const [ref, inView] = useInView({ triggerOnce: false });
-                
-                  return (
-                    <div
-                      key={stat.label}
-                      ref={ref}
-                      className="glass-effect dark:glass-effect p-3 rounded-lg text-center bg-white/50 dark:bg-white/10 border border-gray-200 dark:border-white/20"
-                    >
-                      <div className="text-xl font-bold gradient-text">
-                        {inView && <CountUp end={stat.value} duration={3} />}+
-                      </div>
-                      <div className="text-xs text-foreground/60">{stat.label}</div>
-                    </div>
-                  );
-                })}
-              </div>
+{/* Profile Card */}
+<div className="lg:col-span-1 animate-on-scroll">
+  <div className="sticky top-16">
+    <div className="relative">
+      {/* Container aspect ratio dynamically controls height across device sizes */}
+      <div className="w-full aspect-square sm:aspect-[4/4] rounded-2xl bg-gradient-to-br from-purple-100/50 to-blue-100/50 dark:from-purple-500/20 dark:to-blue-500/20 glass-effect dark:glass-effect overflow-hidden p-2 border border-gray-200/50 dark:border-white/10">
+        <img 
+          src="/images/portfolio-Photoroom.png" 
+          alt="Profile" 
+          className="w-full h-full object-cover object-center rounded-xl"
+        />
+      </div>
+      <div className="absolute -top-2 -right-2 w-12 h-12 bg-pink-500/30 rounded-full animate-float -z-10"></div>
+      <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-purple-500/30 rounded-full animate-float -z-10" style={{ animationDelay: '-2s' }}></div>
+    </div>
+
+    {/* Stats */}
+    <div className="grid grid-cols-2 gap-3 mt-6">
+      {[
+        { value: 25, label: 'Projects' },
+        { value: 7, label: 'Years Exp' },
+      ].map((stat) => {
+        const [ref, inView] = useInView({ triggerOnce: false });
+
+        return (
+          <div
+            key={stat.label}
+            ref={ref}
+            className="glass-effect dark:glass-effect p-3 rounded-lg text-center bg-white/50 dark:bg-white/10 border border-gray-200 dark:border-white/20"
+          >
+            <div className="text-xl font-bold gradient-text">
+              {inView && <CountUp end={stat.value} duration={3} />}+
             </div>
+            <div className="text-xs text-foreground/60">{stat.label}</div>
           </div>
+        );
+      })}
+    </div>
+  </div>
+</div>
           
           {/* Content Sections */}
           <div className="lg:col-span-2 animate-on-scroll space-y-8">
