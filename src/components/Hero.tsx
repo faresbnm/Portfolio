@@ -18,7 +18,7 @@ const Hero = () => {
   }
 
   const [text, setText] = useState('');
-  const fullText = 'Web Developer and Cybersecurity Specialist';
+  const fullText = 'Networking, Programming & Securing';
 
   useEffect(() => {
     let index = 0;
@@ -53,7 +53,7 @@ const Hero = () => {
             <span className="animate-pulse">|</span>
           </h2>
           <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Crafting exceptional and secured digital experiences with modern technologies. 
+            Cybersecurity Specialist, Network Administrator and Full Stack Developer
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
